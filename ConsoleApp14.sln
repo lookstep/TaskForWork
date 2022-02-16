@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.CMD", "ConsoleApp14\Contacts.CMD.csproj", "{A0EE2F3E-3B7F-40AE-AADF-88283DED7BDB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{24899B7F-12E9-4624-9AB6-B2BDEF155077} = {24899B7F-12E9-4624-9AB6-B2BDEF155077}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contancts.LIB", "Contancts.LIB\Contancts.LIB.csproj", "{24899B7F-12E9-4624-9AB6-B2BDEF155077}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0EE2F3E-3B7F-40AE-AADF-88283DED7BDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0EE2F3E-3B7F-40AE-AADF-88283DED7BDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0EE2F3E-3B7F-40AE-AADF-88283DED7BDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0EE2F3E-3B7F-40AE-AADF-88283DED7BDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24899B7F-12E9-4624-9AB6-B2BDEF155077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24899B7F-12E9-4624-9AB6-B2BDEF155077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24899B7F-12E9-4624-9AB6-B2BDEF155077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24899B7F-12E9-4624-9AB6-B2BDEF155077}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {366FEF0E-FA61-4C77-8991-67293187A376}
+	EndGlobalSection
+EndGlobal
