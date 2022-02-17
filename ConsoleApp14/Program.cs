@@ -9,7 +9,7 @@ namespace ConsoleApp14
             var test = new ParticipantController();
             foreach (var el in test.AllContacts)
             {
-                Console.WriteLine($"{el.FirstName} {el.LastName}, {el.RegisterDate}");
+                Console.WriteLine($"{el.FirstName} {el.LastName}, {el.RegisterDate}, {el.DocumentId}");
             }
         }
     }

@@ -31,7 +31,7 @@ namespace Contancts.LIB.Models.GetDataModels
             var dataCsv = csvReader.GetRecords<ParticipantCSV>().ToList();
             foreach (var participant in dataCsv)
             {
-                contacts.Add(new ContactCSV(participant.Name, participant.SecondName, participant.Date));
+                contacts.Add(new ContactCSV(participant.Name, participant.SecondName, participant.Date, DocumentNumber));
             }
             return contacts;
         }

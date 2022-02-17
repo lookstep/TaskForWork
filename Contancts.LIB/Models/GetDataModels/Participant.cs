@@ -25,7 +25,7 @@ namespace Contancts.LIB.Models.GetDataModels
             var contacts = new List<Contact>();
             foreach (var participant in xmlData)
             {
-                contacts.Add(new ContactXML(participant.Name, participant.Surname, participant.RegisterDate));
+                contacts.Add(new ContactXML(participant.Name, participant.Surname, participant.RegisterDate, DocumentNumber));
             }
             return contacts;
         }

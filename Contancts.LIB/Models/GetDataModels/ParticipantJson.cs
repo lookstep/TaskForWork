@@ -27,7 +27,7 @@ namespace Contancts.LIB.Models.GetDataModels
                 var jsonData = await JsonSerializer.DeserializeAsync<IEnumerable<ParticipantJson>>(fs);
                 foreach (var patricipant in jsonData)
                 {
-                    contacts.Add(new ContactJson(patricipant.FirstName, patricipant.LastName, patricipant.RegistrationDate));
+                    contacts.Add(new ContactJson(patricipant.FirstName, patricipant.LastName, patricipant.RegistrationDate, DocumentNumber));
                 }
                 return contacts;
             }
