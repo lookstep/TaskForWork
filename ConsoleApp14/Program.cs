@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Contancts.LIB.Controllers;
 namespace ConsoleApp14
 {
@@ -9,8 +10,10 @@ namespace ConsoleApp14
             var test = new ParticipantController();
             foreach (var el in test.AllContacts)
             {
-                Console.WriteLine($"{el.FirstName} {el.LastName}, {el.RegisterDate}, {el.DocumentId}");
+                Console.WriteLine(el);
             }
+            Console.WriteLine(test.GetCurrentContact("Юлия"));
+
         }
     }
 }

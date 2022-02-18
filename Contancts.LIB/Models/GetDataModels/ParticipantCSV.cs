@@ -26,12 +26,13 @@ namespace Contancts.LIB.Models.GetDataModels
         public List<Contact> GetDataCSV()
         {
             var contacts = new List<Contact>();
+            
             using var Sr = new StreamReader(CSVPath);
             using var csvReader = new CsvReader(Sr, System.Globalization.CultureInfo.InvariantCulture);              
             var dataCsv = csvReader.GetRecords<ParticipantCSV>().ToList();
             foreach (var participant in dataCsv)
             {
-                contacts.Add(new ContactCSV(participant.Name, participant.SecondName, participant.Date, DocumentNumber));
+                contacts.Add(new ContactCSV(participant.Name, participant.SecondName, participant.Date, DocumentNumber)); ;
             }
             return contacts;
         }
