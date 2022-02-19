@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Contancts.LIB.Models.SetDataModels
 {
-    class ContactCSV : Contact
+    internal class ContactCSV : Contact
     {
         public override string FirstName { get; init; }
         public override string LastName { get; init; }

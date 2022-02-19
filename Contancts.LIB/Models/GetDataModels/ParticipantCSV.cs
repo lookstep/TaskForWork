@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Contancts.LIB.Models.SetDataModels;
 using CsvHelper;
-using CsvHelper.Configuration;
 using CsvHelper.Configuration.Attributes;
 
 namespace Contancts.LIB.Models.GetDataModels
@@ -17,13 +14,13 @@ namespace Contancts.LIB.Models.GetDataModels
         private const string DocumentNumber = "Сервис №2";
 
         [Index(0)]
-        public string Name { get; set; }
+        public string Name { get; init; }
         [Index(1)]
-        public string SecondName { get; set; }
+        public string SecondName { get; init; }
         [Index(2)]
-        public DateTime Date { get; set; }
+        public DateTime Date { get; init; }
 
-        public List<Contact> GetDataCSV()
+        internal List<Contact> GetDataCSV()
         {
             var contacts = new List<Contact>();
             

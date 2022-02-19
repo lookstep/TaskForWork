@@ -7,9 +7,7 @@ namespace Contancts.LIB.Controllers
 {
     public class ParticipantController
     {
-        public List<Contact> AllContacts { get; set; }
-        public Contact CurrentContact { get; set; }
-         
+        private readonly List<Contact> AllContacts;
         public ParticipantController()
         {
             AllContacts = new List<Contact>();
@@ -31,12 +29,12 @@ namespace Contancts.LIB.Controllers
             }
             AllContacts = AllContacts.OrderBy(x => x.RegisterDate).ToList();
         }
-        public string GetCurrentContact(string name)
+        public IEnumerable<Contact> GetCurrentContact(string name)
         {
-            var contact = AllContacts.FirstOrDefault(x => x.FirstName == name);
+            var contact = AllContacts.Where(x => x.FirstName == name);
             if (contact is null)
-                return "Контакт не найден.";
-            else return contact.ToString();
+                return new List<Contact>();
+            else return contact;
         }
         public IEnumerable<Contact> GetPage(int pageNumber)
         {

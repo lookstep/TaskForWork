@@ -2,10 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Contancts.LIB.Models.GetDataModels
@@ -18,7 +15,7 @@ namespace Contancts.LIB.Models.GetDataModels
         public string FirstName { get; init; }
         public string LastName { get; init; }
         public DateTime RegistrationDate { get; init; }
-        public async Task<List<Contact>> GetDataJSON()
+        internal async Task<List<Contact>> GetDataJSON()
         {
             using var fs = new FileStream(jsonPath, FileMode.Open);
             var contacts = new List<Contact>();
